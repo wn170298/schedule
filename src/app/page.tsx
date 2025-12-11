@@ -188,7 +188,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Weekly Schedule</h2>
           <p className="text-gray-600 mb-6">
             Total Classes: <strong>{classes.length}</strong> | Total Credits:{' '}
-            <strong>{classes.reduce((sum, c) => sum + c.credits, 0)}</strong>
+            <strong>{classes.reduce((sum: number, c: Class) => sum + c.credits, 0)}</strong>
           </p>
           <WeeklyView schedule={schedule} onEdit={handleEditClick} onDelete={handleDeleteClass} />
         </div>
