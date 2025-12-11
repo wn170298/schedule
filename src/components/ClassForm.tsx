@@ -33,7 +33,7 @@ export default function ClassForm({ onSubmit, initialData, isLoading = false }: 
 
   const [error, setError] = useState<string | null>(null)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelect>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
